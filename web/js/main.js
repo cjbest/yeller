@@ -20,15 +20,18 @@
 		list.removeChild(itemTemplate);
 
 		// lazy man's templating
-		yellsRef.endAt().limit(25).on('child_added', function(yellSnap){
-			if (loadingElem.parentNode) {
-				loadingElem.parentNode.removeChild(loadingElem);
-			}
+		var latestYellsRef = yellsRef.endAt().limit(25);
+		latestYellsRef.on('child_added', function(yellSnap){
 			var item = itemTemplate.cloneNode(true);
 			item.querySelector('.name').textContent = yellSnap.val().name;
 			item.querySelector('.message').textContent = yellSnap.val().message;
 
 			list.insertBefore(item, list.firstChild);
+		});
+		latestYellsRef.once('value', function(){
+			if (loadingElem.parentNode) {
+				loadingElem.parentNode.removeChild(loadingElem);
+			}
 		});
 
 		// let App.js handle the form
