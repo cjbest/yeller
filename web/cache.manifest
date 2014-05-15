@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+//cdn.kik.com/app/2.0.0/app.css
+/css/styles.css
+
+//cdn.firebase.com/js/client/1.0.15/firebase.js
+//cdn.kik.com/kik/1.0.9/kik.js
+//cdn.kik.com/app/2.0.0/app.min.js
+/js/main.js
+
+NETWORK:
+*

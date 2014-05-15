@@ -1,0 +1,82 @@
+
+textarea.app-input {
+	background-color: #fff;
+	height: inherit;
+	height: 40px;
+	vertical-align: middle;
+	line-height: 40px;
+	padding: 0px;
+}
+
+#postButton {
+	display:none;
+}
+
+.page-feed .app-content {
+	background-color: #fff;
+}
+
+.yell {
+	margin: 0px 20px;
+	padding: 20px 0px;
+	border-bottom: 1px solid rgba(233,127,2, 0.15);
+	background: #fff;
+}
+
+.yell .name {
+	font-style: italic;
+	color: #E97F02;
+	display: block;
+	line-height: 1.5em;
+}
+.yell .name:after {
+	content: ": ";
+}
+
+.yell .message {
+	text-transform: uppercase;
+	word-wrap: break-word;
+	display: inline;
+	font-weight: bold;
+}
+
+.yell-list {
+	margin-bottom: 20px;
+}
+
+.yell-list .yell:nth-child(1) .message {
+	font-size: 262%;
+}
+.yell-list .yell:nth-child(2) .message {
+	font-size: 162%;
+}
+.yell-list .yell:nth-child(3) .message {
+	font-size: 100%;
+}
+
+textarea[name="message"] {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.app-button.gold {
+	color: #fff;
+	background-color: #F8CA00;
+}
+
+.app-button.gold.active {
+	background-color: #ECC000;
+}
+
+#continueButton {
+	margin-top:8px;
+}
+
+.app-topbar {
+	background-color: #490A3D;
+	color: #F8CA00;
+}
+
+body {
+	color: #490A3D;
+}

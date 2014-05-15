@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+	<head>
+		<!-- App info -->
+		<title>Yelling</title>
+		<meta name="description" content="WHY IS THIS SO MUCH FUN?">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="kik-prefer" content="true">
+		<link rel="kik-icon" href="/img/icon.png?v=2">
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="//cdn.kik.com/app/2.0.0/app.css">
+		<link rel="stylesheet" href="/css/styles.css">
+	</head>
+
+	<body>
+		<!-- Pages -->
+		<div class="app-page" data-page="intro">
+			<div class="app-topbar">
+				<div class="app-title">Set a Nickname</div>
+			</div>
+			<div class="app-content">
+				<div class="app-section">
+					<form action="">
+						<input id="nameInput" name="name" maxlength="15" class="app-input app-submit" placeholder="What's your name?">
+						<div id="continueButton" name="continue" class="app-button app-submit gold">Continue</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="app-page page-feed" data-page="feed">
+			<div class="app-topbar">
+				<div class="app-button left" data-back="true">Back</div>
+				<div class="app-title">YELLING!</div>
+			</div>
+			<div class="app-content">
+				<div class="yell">
+					<form action="">
+						<textarea name="message" rows="1" class="app-input app-submit" maxlength="120" placeholder="What are you yelling about?"></textarea>
+						<div id="postButton" class="app-button app-submit">Post</div>
+					</form>
+				</div>
+				<div class="yell-list">
+					<div class="yell">
+						<div class="name"></div>
+						<div class="message"></div>
+						
+					</div>
+					<div class="loading">
+						Loading...
+					<div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src='//cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+		<script src="//cdn.kik.com/kik/1.0.9/kik.js"></script>
+		<script src="//cdn.kik.com/app/2.0.0/app.min.js"></script>
+		<script src="/js/main.js"></script>
+	</body>
+</html>
