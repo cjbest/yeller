@@ -16,12 +16,14 @@
 
 		var list = page.querySelector('.yell-list');
 		var loadingElem = list.querySelector('.loading')
-		list.removeChild(loadingElem);
 		var itemTemplate = list.querySelector('.yell');
 		list.removeChild(itemTemplate);
 
 		// lazy man's templating
 		yellsRef.endAt().limit(25).on('child_added', function(yellSnap){
+			if (loadingElem.parentNode) {
+				loadingElem.parentNode.removeChild(loadingElem);
+			}
 			var item = itemTemplate.cloneNode(true);
 			item.querySelector('.name').textContent = yellSnap.val().name;
 			item.querySelector('.message').textContent = yellSnap.val().message;

@@ -54,6 +54,13 @@ textarea.app-input {
 	font-size: 100%;
 }
 
+.yell-list .loading {
+	text-align: center;
+}
+.yell-list .loading img {
+	margin: 40px;
+}
+
 textarea[name="message"] {
 	text-transform: uppercase;
 	font-weight: bold;
