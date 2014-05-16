@@ -15,6 +15,7 @@
 	App.populator('feed', function (page, data) {
 
 		var list = page.querySelector('.yell-list');
+		var shareButton = page.querySelector('.share-button');
 		var loadingElem = list.querySelector('.loading')
 		var itemTemplate = list.querySelector('.yell');
 		list.removeChild(itemTemplate);
@@ -44,14 +45,27 @@
 			yellsRef.push({
 				name: data.name,
 				message: message
-			}, function(err){
+			}, function(err) {
 				unlock();
 				if (!err) {
-					// TODO: handle error
 					page.querySelector('textarea').value = "";
+				} else {
+					// TODO
 				}
 			});
 		});
+
+		// share button
+		if (!kik.send) {
+			shareButton.parentNode.removeChild(shareButton);
+		} else {
+			shareButton.addEventListener('click', function(){
+				kik.send({
+					pic: '/img/icon.png',
+					big: true
+				});
+			});
+		}
 
 		// textarea resizing
 		var textarea = page.querySelector('textarea');

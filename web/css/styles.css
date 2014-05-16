@@ -84,6 +84,14 @@ textarea[name="message"] {
 	color: #F8CA00;
 }
 
+.app-topbar .share-button {
+	background-image: url(/img/share.png);
+	background-size: 25px;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 25px;
+}
+
 body {
 	color: #490A3D;
 }
