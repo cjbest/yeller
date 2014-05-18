@@ -56,7 +56,7 @@
 		});
 
 		// share button
-		if (!kik || !kik.send) {
+		if (!window.kik || !kik.send) {
 			shareButton.parentNode.removeChild(shareButton);
 		} else {
 			shareButton.addEventListener('click', function(){
